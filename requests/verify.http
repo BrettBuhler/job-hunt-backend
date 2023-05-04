@@ -1,0 +1,8 @@
+POST http://localhost:5000/verify
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyZXR0YnVobGVyQHlhaG9vLmNvbSIsImlhdCI6MTY4MzE2MjE5OCwiZXhwIjoxNjgzMTY1Nzk4fQ.LEmDeMEGzsjbZmJDz9zuVBi6ATpbGv-DDaBDc1dpbZ8"
+}
+
+
