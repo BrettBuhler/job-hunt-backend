@@ -7,6 +7,9 @@ const cors = require('cors')
 const app = express()
 const crypto = require('crypto')
 
+app.use(cors({
+    origin: ['http://example.com', 'http://localhost:3000']
+  }))
 //parse application/json
 app.use(bodyParser.json())
 //route for generating and ferifying JWT tokens
@@ -15,10 +18,6 @@ app.use(tokenRouter)
 app.use(verifyRouter)
 //route for signing up a new user
 app.use(signupRouter)
-
-app.use(cors({
-    origin: '*'
-}))
 
 app.get('/', (req, res) => {
     res.send(crypto.randomBytes(65).toString('hex'))

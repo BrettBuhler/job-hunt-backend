@@ -11,7 +11,6 @@ const verifyToken = (token) => {
         const decoded = jwt.verify(token, jwtKey)
         return decoded
     } catch (err) {
-        console.log(err)
         return false
     }
 }
