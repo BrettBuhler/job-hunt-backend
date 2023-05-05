@@ -1,4 +1,16 @@
 const mongoose = require('mongoose')
+const Skill = require('./skillSchema')
+
+const skillSchema = new mongoose.Schema({
+    skill: {
+        type: String,
+        required: true
+    },
+    keywords: {
+        type: [String],
+        required: true
+    }
+})
 
 const jobHuntUserSchema = new mongoose.Schema({
     email: {
@@ -9,7 +21,12 @@ const jobHuntUserSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true,
+    },
+    skills: {
+        type: [skillSchema],
+        required: false
     }
+
 })
 
 const JobHuntUser = mongoose.model('JobHuntUser', jobHuntUserSchema)

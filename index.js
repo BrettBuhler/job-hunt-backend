@@ -1,6 +1,7 @@
 const express = require('express')
 const tokenRouter = require('./routes/token.js')
 const verifyRouter = require('./routes/verify.js')
+const signupRouter = require('./routes/signup.js')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
@@ -12,6 +13,8 @@ app.use(bodyParser.json())
 app.use(tokenRouter)
 //route for verifying JWT tokens
 app.use(verifyRouter)
+//route for signing up a new user
+app.use(signupRouter)
 
 app.use(cors({
     origin: '*'
