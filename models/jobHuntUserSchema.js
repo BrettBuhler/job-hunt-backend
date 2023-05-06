@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const Skill = require('./skillSchema')
 
 const skillSchema = new mongoose.Schema({
     skill: {
@@ -25,9 +24,9 @@ const jobHuntUserSchema = new mongoose.Schema({
     skills: {
         type: [skillSchema],
         required: false
-    }
+    },
 
-})
+}, {collection: 'users' })
 
 const JobHuntUser = mongoose.model('JobHuntUser', jobHuntUserSchema)
 
