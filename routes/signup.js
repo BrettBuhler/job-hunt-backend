@@ -17,7 +17,7 @@ router.post('/signup', (req, res) => {
                 .then(dbRes => {
                     console.log('dbRes', dbRes)
                     if (dbRes){
-                        res.status(200).json(generateToken({userEmail}))
+                        res.status(200).json(generateToken({email: userEmail}))
                     } else {
                         res.status(400).json({'Error': 'User email already taken.'})
                     }
