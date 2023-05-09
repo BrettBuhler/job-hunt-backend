@@ -1,0 +1,6 @@
+GET  http://localhost:5000/getinfo
+Content-Type: application/json
+
+{
+    "email": "JIMBOB@yahoo.com"
+}
