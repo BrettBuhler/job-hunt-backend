@@ -1,4 +1,4 @@
-GET  http://localhost:5000/getinfo
+GET http://localhost:5000/getinfo?email=JIMBOB@yahoo.com
 Content-Type: application/json
 
 {

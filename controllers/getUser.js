@@ -15,7 +15,6 @@ async function getUser (userEmail) {
     }
     catch (error) {
         console.error(error)
-        throw new Error('Error retrieving user')
     } finally {
         await client.close()
     }

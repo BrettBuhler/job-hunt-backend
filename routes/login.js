@@ -25,7 +25,8 @@ router.post('/login', (req, res) => {
                         const newToken = generateToken({email: userEmail})
                         res.status(200).json({
                             message: 'Login successful',
-                            token: newToken
+                            token: newToken,
+                            user: user
                         })
                     } else {
                         //Passwords don't match
