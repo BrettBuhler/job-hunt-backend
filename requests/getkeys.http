@@ -1,0 +1,4 @@
+POST http://localhost:5000/getkeys
+Content-Type: application/json
+
+{"text": "Bachelor of Science degree in Computer Science or Engineering; or related field an" }

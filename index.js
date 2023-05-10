@@ -5,6 +5,7 @@ const signupRouter = require('./routes/signup.js')
 const loginRouter = require('./routes/login.js')
 const getinfoRouter = require('./routes/getinfo.js')
 const updateuserRoute = require('./routes/updateuser.js')
+const getkeysRouter = require('./routes/getkeys.js')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const app = express()
@@ -27,7 +28,8 @@ app.use(loginRouter)
 app.use(getinfoRouter)
 //route for updating users
 app.use(updateuserRoute)
-
+//route for getting keywords from text
+app.use(getkeysRouter)
 app.get('/', (req, res) => {
     res.send(crypto.randomBytes(65).toString('hex'))
 })
