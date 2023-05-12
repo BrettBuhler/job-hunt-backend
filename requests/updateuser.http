@@ -3,10 +3,5 @@ Content-Type: application/json
 
 {
     "email": "JIMBOB@yahoo.com",
-    "skills": [
-        {"name": "JavaScript", "keywords": ["yellow","Red", "Green"], "description": "Once I ate a hotdog"},
-        {"name": "MochaScript", "keywords": ["yellow","Red", "Green"], "description": "Once I ate a hotdog"},
-        {"name": "PokaScript", "keywords": ["yellow","Red", "Green"], "description": "Once I ate a hotdog"}
-    ],
-    "dog": "yes"
+    "resumes": {"name": "fullstack", "text": "this is some resume text", "resume":{"name":"dog", "text":"yes"}}
 }
