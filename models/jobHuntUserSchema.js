@@ -1,5 +1,16 @@
 const mongoose = require('mongoose')
 
+const resumesSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    text: {
+        type: String,
+        required: true
+    }
+})
+
 const skillSchema = new mongoose.Schema({
     skill: {
         type: String,
@@ -23,6 +34,10 @@ const jobHuntUserSchema = new mongoose.Schema({
     },
     skills: {
         type: [skillSchema],
+        required: false
+    },
+    resumes: {
+        type: [resumesSchema],
         required: false
     },
 
