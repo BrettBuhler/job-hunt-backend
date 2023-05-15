@@ -8,7 +8,7 @@ async function getKeyWords (text) {
       const openai = new OpenAIApi(configuration);
       const response = await openai.createCompletion({
         model: "text-davinci-003",
-        prompt: `Format your answer in a comma delimited string such as 'javascript, python, node.js'. Do not return anything else. Extract keywords from this text:\n${text}`,
+        prompt: `Format your answer in a comma delimited string such as 'javascript,HTML,CSS'. Do not return anything else. Extract keywords from this text:\n${text}`,
         temperature: 0.5,
         max_tokens: 1000,
         top_p: 1.0,
