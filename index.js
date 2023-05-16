@@ -1,5 +1,6 @@
 const express = require('express')
 require('dotenv').config()
+const path = require('path')
 const tokenRouter = require('./routes/token.js')
 const verifyRouter = require('./routes/verify.js')
 const signupRouter = require('./routes/signup.js')
@@ -40,9 +41,10 @@ app.use(getkeysRouter)
 app.use(getCoverLetterRouter)
 
 app.get('/', (req, res) => {
+    console.log('New User')
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-app.listen(PORT | 5000, () => {
-    console.log('Listening on port 5000')
+app.listen(PORT || 5000, () => {
+    console.log('Listening on port:' + ` ${PORT}`)
 })

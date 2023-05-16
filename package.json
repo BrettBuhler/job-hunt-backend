@@ -4,7 +4,8 @@
   "description": "Job Hunt's Node.js backend",
   "main": "index.js",
   "scripts": {
-    "test": "Jest"
+    "test": "Jest",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/BrettBuhler/job-hunt-backend/issues"
   },
-  "homepage": "https://github.com/BrettBuhler/job-hunt-backend#readme",
+  "homepage": "https://github.com/BrettBuhler/job-hunt",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "body-parser": "^1.20.2",
@@ -26,6 +27,7 @@
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.4.0",
     "mongoose": "^7.1.0",
-    "openai": "^3.2.1"
+    "openai": "^3.2.1",
+    "path": "^0.12.7"
   }
 }
