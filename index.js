@@ -15,7 +15,8 @@ const crypto = require('crypto')
 
 const frontEndURL = process.env.FRONT_END_URL
 const PORT = process.env.PORT
-
+//added static / public
+app.use(express.static('public'))
 app.use(cors({
     origin: [frontEndURL, 'http://localhost:3000']
   }))
@@ -39,7 +40,7 @@ app.use(getkeysRouter)
 app.use(getCoverLetterRouter)
 
 app.get('/', (req, res) => {
-    res.send(crypto.randomBytes(65).toString('hex'))
+    res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
 app.listen(PORT | 5000, () => {
